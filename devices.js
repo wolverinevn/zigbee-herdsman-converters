@@ -64,8 +64,8 @@ const configureReporting = {
     batteryPercentageRemaining: async (endpoint) => {
         const payload = [{
             attribute: 'batteryPercentageRemaining',
-            minimumReportInterval: repInterval.HOUR,
-            maximumReportInterval: repInterval.MAX,
+            minimumReportInterval: 1,
+            maximumReportInterval: 5,
             reportableChange: 0,
         }];
         await endpoint.configureReporting('genPowerCfg', payload);
